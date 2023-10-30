@@ -30,7 +30,22 @@ const { createApp } = Vue
             }
         },
         methods: {
-            
+            activeSlidePlus(){
+                this.activeSlide++;
+                if(this.activeSlide === this.slides.length){
+                    this.activeSlide = 0;
+                } else{
+                    this.activeSlide += 1;
+                }
+                return this.activeSlide
+            },
+            activeSlideLess(){
+                if(this.activeSlide === 0){
+                    this.activeSlide = this.slides.length -1;
+                } else{
+                    this.activeSlide -= 1;
+                }
+            },
             
         },
         mounted(){
