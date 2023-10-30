@@ -29,11 +29,11 @@ const { createApp } = Vue
                 activeSlide: 0,
                 bigUp: "",
                 arrow: "",
-            }
+            };
         },
         methods: {
             activeSlidePlus(){
-                (this.activeSlide === this.slides.length) ? this.activeSlide = 0 : this.activeSlide++;
+                (this.activeSlide === this.slides.length -1) ? this.activeSlide = 0 : this.activeSlide++;
             },
             activeSlideLess(){
                 (this.activeSlide === 0) ? this.activeSlide = this.slides.length -1 : this.activeSlide--;
