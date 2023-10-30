@@ -23,6 +23,7 @@
 .scale{
     transform: scale(1.5);
     z-index: 1000;
+    position:sticky;
 }
 .item img {
     width: 100%;
@@ -73,9 +74,16 @@
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    z-index: 999;
+    z-index:1001;
+
+    
 }
 
+.arrow{
+    left: 150%;
+    transform: scale(1.5);
+    border: 2px solid greenyellow;
+}
 .next {
     bottom: 0;
 }

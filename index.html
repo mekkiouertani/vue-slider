@@ -25,8 +25,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev" @click="activeSlidePlus()"></div>
-                    <div class="next" @click="activeSlideLess()"></div>
+                    <div class="prev" :class="arrow" @click="activeSlidePlus()"></div>
+                    <div class="next" :class="arrow" @click="activeSlideLess()"></div>
                     <div class="thumb" :class="[activeSlide === index ? 'active' : '']"  @click="bigImage()" :class="bigUp" v-for="(thumb, index) in slides">
                         <img :src="slides[index].image" :alt="slides[activeSlide].title"/>
                     </div>

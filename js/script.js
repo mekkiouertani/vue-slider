@@ -28,6 +28,7 @@ const { createApp } = Vue
                 ],
                 activeSlide: 0,
                 bigUp: "",
+                arrow: ""
             }
         },
         methods: {
@@ -39,6 +40,7 @@ const { createApp } = Vue
             },
             bigImage(){
             this.bigUp = this.bigUp === "scale" ? "" : "scale"
+            this.arrow = this.arrow === "" ? "arrow" : ""
             }
             
         },
