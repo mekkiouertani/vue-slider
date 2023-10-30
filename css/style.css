@@ -22,7 +22,7 @@
     transform: scale(1.5);
     z-index: 1000;
     position:sticky;
-    transition: 1s;
+    transition: 1s ease-in-out;
 }
 .item img {
     width: 100%;
@@ -80,9 +80,11 @@
 }
 
 .arrow{
-    left: 150%;
-    transform: scale(1.5);
+    left: 200%;
+    transform: scale(2);
     border: 2px solid greenyellow;
+    transition: 2s;
+
 }
 
 .next {
