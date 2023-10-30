@@ -28,7 +28,7 @@ const { createApp } = Vue
                 ],
                 activeSlide: 0,
                 bigUp: "",
-                arrow: ""
+                arrow: "",
             }
         },
         methods: {

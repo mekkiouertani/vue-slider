@@ -16,8 +16,6 @@
     width: 700px;
     height: 300px;
     position: relative;
-
-
 }
 
 .scale{
@@ -84,6 +82,7 @@
     transform: scale(1.5);
     border: 2px solid greenyellow;
 }
+
 .next {
     bottom: 0;
 }
