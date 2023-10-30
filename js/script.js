@@ -41,6 +41,9 @@ const { createApp } = Vue
             bigImage(){
             this.bigUp = this.bigUp === "scale" ? "" : "scale"
             this.arrow = this.arrow === "" ? "arrow" : ""
+            },
+            activeIndex(index){
+                this.activeSlide = index
             }
             
         },

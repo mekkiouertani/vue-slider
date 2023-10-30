@@ -16,6 +16,8 @@
     width: 700px;
     height: 300px;
     position: relative;
+    transform: scale(1);
+    transition: 2s;
 }
 
 .scale{
@@ -28,7 +30,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+    transform: scale(1);
 }
 
 .item .text {
@@ -45,12 +47,15 @@
     height: 300px;
     background: #000;
     position: relative;
+    
 }
 
 .thumb {
     height: calc((300px) / 5);
     opacity: 0.5;
     cursor: pointer;
+    transform: scale(1);
+
 }
 
 .thumb img {
@@ -75,7 +80,8 @@
     transform: translate(-50%);
     cursor: pointer;
     z-index:1001;
-
+    transform: scale(1);
+    transition: 2s;
     
 }
 
