@@ -16,7 +16,7 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item" :class="bigUp">
+                <div class="item" :class="bigUp" @click="bigImage">
                     <img :src="slides[activeSlide].image" alt="Spiderman" :class="bigUp"/>
                     <div class="text">
                         <h3>{{slides[activeSlide].title}}</h3>
@@ -27,7 +27,7 @@
                 <div class="thumbs">
                     <div class="prev" @click="activeSlidePlus()"></div>
                     <div class="next" @click="activeSlideLess()"></div>
-                    <div class="thumb" :class="[activeSlide === index ? 'active' : '']" @click="bigImage()" v-for="(thumb, index) in slides">
+                    <div class="thumb" :class="[activeSlide === index ? 'active' : '']"  @click="bigImage()" :class="bigUp" v-for="(thumb, index) in slides">
                         <img :src="slides[index].image" :alt="slides[activeSlide].title"/>
                     </div>
                 </div>
