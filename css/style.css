@@ -22,6 +22,7 @@
     transform: scale(1.5);
     z-index: 1000;
     position:sticky;
+    transition: 1s;
 }
 .item img {
     width: 100%;
@@ -49,6 +50,7 @@
 .thumb {
     height: calc((300px) / 5);
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .thumb img {
