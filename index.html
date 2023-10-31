@@ -14,10 +14,10 @@
     <div id="app">
 
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseover="stopAutoPlay" @mouseleave="startAutoPlay" @keyup.up="activeSlidePlus" @keyup.down="activeSlideLess">
 
                 <div class="item" :class="bigUp" @click="bigImage">
-                    <img class="" :src="slides[activeSlide].image" alt="Spiderman" :class="bigUp"/>
+                    <img class="" :src="slides[activeSlide].image" :alt="slides[activeSlide].title" :class="bigUp"/>
                     <div class="text" >
                         <h3>{{slides[activeSlide].title}}</h3>
                         <p>{{slides[activeSlide].text}}</p>
@@ -25,14 +25,13 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev" :class="arrow" @click="activeSlidePlus()"></div>
-                    <div class="next" :class="arrow" @click="activeSlideLess()"></div>
-                    <div class="thumb" v-for="(thumb, index) in slides" :class="[activeSlide === index ? 'active' : '']"  @click="bigImage()" :class="bigUp" >
-                        <img :src="slides[index].image" :alt="slides[activeSlide].title" @click="activeIndex(index)"/>
+                    <div class="prev" :class="arrow" @click="activeSlideLess()"></div>
+                    <div class="next" :class="arrow" @click="activeSlidePlus()"></div>
+                    <div class="thumb" v-for="(thumb, index) in slides" :class="{'active': index === activeSlide}"  @click="bigImage()" :class="bigUp" >
+                       <img :src="thumb.image" :alt="slides[activeSlide].title" @click="activeIndex(index)"/>
                     </div>
                 </div>
                
-
             </div>
         </div>
 

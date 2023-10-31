@@ -29,6 +29,7 @@ const { createApp } = Vue
                 activeSlide: 0,
                 bigUp: "",
                 arrow: "",
+                interval: null,
             };
         },
         methods: {
@@ -44,11 +45,15 @@ const { createApp } = Vue
             },
             activeIndex(index){
                 this.activeSlide = index
+            },
+            startAutoPlay(){
+                this.interval = setInterval(this.activeSlidePlus, 1000);
+            },
+            stopAutoPlay(){
+                clearInterval(this.interval)
             }
-            
         },
         mounted(){
-            console.log(this.slides);
+            this.startAutoPlay();
         }
-
     }).mount('#app')
